@@ -1,0 +1,25 @@
+{
+  "name": "sustainable_web",
+  "version": "1.0.0",
+  "description": "Assignment for framework",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgvedel/sustainable_web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kgvedel/sustainable_web/issues"
+  },
+  "homepage": "https://github.com/kgvedel/sustainable_web#readme",
+  "devDependencies": {
+    "vite": "^2.9.1"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1"
+  }
+}
