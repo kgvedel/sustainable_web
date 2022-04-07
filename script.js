@@ -3,16 +3,26 @@
 //læse url fra bruger
 //fetch fra lokal fil
 
-const submit_btn = document.querySelector(".calc_btn");
-const form = document.querySelector("form");
+//Det overstående er klaret
+
+//vi mangler: Clone, åbne nyt site ved calculate og forms
+
+const form = document.querySelector("form.calculator");
 const user_url = form.elements.url.value;
 
 form.addEventListener("submit", calculate);
 
 function calculate(event) {
+    /* fetch("https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=" + user_url).then(res => res.json()).then(console.log); */
+    fetch("https://kea-alt-del.dk/websitecarbon/site/?url=" + user_url).then(res => res.json()).then(console.log);
     event.preventDefault();
-    console.log("test" + user_url);
-
+    /* showDetails(); */
+    /* console.log("test" + user_url); */
 }
 
-fetch("kea.json").then(res => res.json()).then(console.log);
+/* function showDetails(){
+    location.href = "resolve.html";
+    
+}
+ */
+
