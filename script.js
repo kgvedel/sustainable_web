@@ -1,12 +1,18 @@
 //1 grib submit
 //2 preventDefault
-//løse url fra bruger
+//læse url fra bruger
 //fetch fra lokal fil
 
 const submit_btn = document.querySelector(".calc_btn");
-submit_btn.addEventListener("submit", calculate);
+const form = document.querySelector("form");
+const user_url = form.elements.url.value;
 
-function calculate(){
-    }
+form.addEventListener("submit", calculate);
 
-fetch("kea.json").then(res=>res.json()).then(console.log);
+function calculate(event) {
+    event.preventDefault();
+    console.log("test" + user_url);
+
+}
+
+fetch("kea.json").then(res => res.json()).then(console.log);
