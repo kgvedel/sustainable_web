@@ -4,5 +4,6 @@
 //fetch fra lokal fil
 
 const submit_btn = document.querySelector(".calc_btn");
+submit_btn.addEventListener("submit", calculate);
 
 fetch("kea.json").then(res=>res.json()).then(console.log);
