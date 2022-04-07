@@ -4,8 +4,10 @@
   "description": "Assignment for framework",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kgvedel/sustainable_web.git"

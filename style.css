@@ -1,39 +1,112 @@
 :root {
-    --input-color: #969696;
+    --input-color: #011638;
     --input-border: #CDD9ED;
     --input-background: rgb(255, 255, 255);
     --input-placeholder: #CBD1DC;
-    --input-border-focus: #275EFE;
-    --group-color: var(--input-color);
+    --input-border-focus: #c88d1a ;
+    --group-color: #fff;
     --group-border: var(--input-border);
-    --group-background: #EEF4FF;
-    --group-color-focus: #fff;
+    --group-background: #cfcfcf;
+    --group-color-focus: #011638;
     --group-border-focus: var(--input-border-focus);
-    --group-background-focus: #678EFE;
+    --group-background-focus: #ddbd56;
+  }
+  /*HUSK HOTPINK #ff69b4 */
+
+  body{
+      margin: auto;
+      display: grid;
+      justify-content: center;
+     
   }
 
-  button{
+  form{
+      padding: 20px;
+  }
+
+  /*STYLING OF FONTS*/
+  p{
+      font-size: 16px, 1em;
+      font-weight: 400;
+  }
+
+  h1{
+      font-size: 5.653rem;
+      color: var(--group-color-focus);
+      font-weight: 700;
+  }
+
+  h2{
+    font-size: 3.998rem;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 2.827rem;
+    font-weight: 500;
+}
+
+h4{
+    font-size: 1.999rem;
+    font-weight: 500;
+}
+
+h5{
+    font-size: 1.414rem;
+    font-weight: 500;
+}
+
+h6{
+    font-size: 1.200rem;
+    font-weight: 500;
+}
+
+
+
+/*STYLING OF BUTTONS*/
+
+  .calc_btn{
     text-align: center;
     padding: 8px 12px;
     font-size: 14px;
     line-height: 25px;
     color: var(--group-color);
-    background: var(--group-background);
+    background: var(--input-color);
     border: 1px solid var(--group-border);
     border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
   }
 
-  #select_industries{
-    text-align: center;
-    padding: 8px 12px;
-    font-size: 14px;
-    line-height: 25px;
+.calc_btn:hover{
+    transform: scale(1.01);
+    transition: 1s;
+    background-color: var(--input-border-focus);
+
+}
+
+
+
+select{
+    margin: auto;
+    width: 100%;
+    height: 50px;
+    text-align: center;     
     color: var(--group-color);
     background: var(--group-background);
     border: 1px solid var(--group-border);
     border-radius: 10px;
+    /* transition: 0.8s ease; */
 
   }
+
+/*   select:focus-within{
+    color: var(--focus-color);
+    background: var(--group-background-focus);
+    border: var(--group-border-focus);
+    transition: 0.8s ease;
+
+  } */
 
   input {
     display: block;
@@ -47,7 +120,7 @@
     border: 1px solid var(--input-border);
     border-left: none;
     background: var(--input-background);
-    transition: border 0.3s ease;
+    transition: border 0.8s ease;
     border-top-right-radius: 10px;
 border-bottom-right-radius: 10px;
   }
@@ -91,11 +164,11 @@ border-bottom-right-radius: 10px;
     font-size: 14px;
     line-height: 25px;
     color: var(--group-color);
-    background: var(--group-background);
+    background-color: var(--group-background);
     border: 1px solid var(--group-border);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+    transition: 0.8s ease;
   }
   .form-group:focus-within > span {
     color: var(--group-color-focus);
