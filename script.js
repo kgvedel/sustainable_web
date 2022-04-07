@@ -4,6 +4,7 @@
 //fetch fra lokal fil
 
 const submit_btn = document.querySelector(".calc_btn");
+submit_btn.addEventListener("submit", calculate);
 
 function calculate(){
     }
