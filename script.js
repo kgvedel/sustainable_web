@@ -56,7 +56,7 @@ function prepareObjects(jsonObject){
     const carbon = Object.create(dataCarbon);
 
         carbon.energy = jsonObject.statistics.energy;
-        carbon.co2 = jsonObject.statistics.co2;
+        carbon.co2 = jsonObject.statistics.co2.grid.grams;
         carbon.green = jsonObject.green;
         carbon.performance = jsonObject.lighthouseResult.categories.performance.score;
         carbon.timing = jsonObject.lighthouseResult.timing;
@@ -88,6 +88,10 @@ function displayData(carbon){
     clone.querySelector("[data-field=energy]").textContent = carbon.energy;
     clone.querySelector("[data-field=co2]").textContent = carbon.co2.grid.grams + " grams";
     clone.querySelector("[data-field=green]").textContent = carbon.green;
+    clone.querySelector("[data-field=performance]").textContent = carbon.performance;
+    clone.querySelector("[data-field=timing]").textContent = carbon.timing;
+    clone.querySelector("[data-field=overall_loading_experience]").textContent = carbon.overall_loading_experience;
+    clone.querySelector("[data-field=responsive_images]").textContent = carbon.responsive_images;
 
 
     document.querySelector("#list tbody").appendChild(clone);
