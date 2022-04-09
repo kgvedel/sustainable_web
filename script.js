@@ -11,7 +11,11 @@ const allData = [];
 const dataCarbon = {
     energy: "",
     co2: "",
-    green: true
+    green: true,
+    performance: "",
+    timing: "",
+    overall_loading_experience: "",
+    
    
 };
 
