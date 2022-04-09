@@ -35,6 +35,8 @@ function calculate(event) {
 
 function loadJsonCarbon(){
     fetch(`kea.json`).then(res => res.json()).then(jsonData =>{prepareObjects(jsonData)});
+    fetch(`page.json`).then(res => res.json()).then(jsonData =>{prepareObjects(jsonData)});
+
  
    /*  fetch(`https://kea-alt-del.dk/websitecarbon/site/?url=${user_url}`).then(res => res.json()).then(console.log);
  */
