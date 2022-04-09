@@ -15,8 +15,7 @@ const dataCarbon = {
     performance: "",
     timing: "",
     overall_loading_experience: "",
-    
-   
+    responsive_images: ""
 };
 
 function start(){
