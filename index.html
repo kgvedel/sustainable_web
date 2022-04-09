@@ -41,6 +41,23 @@
 <button type="submit" class="calc_btn" name="submit">Calculate</button>
 
     </form>
+<table id="list">
+    <thead>
+        <tr>
+          <th>Energy</th>
+          <th>co2</th>
+          <th>Green</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+</table>
+
+    <template id="carbon_template">
+        <tr><td data-field="energy">energy</td> 
+            <td data-field="co2"></td>
+             <td data-field="green"></td> 
+        </tr>
+    </template>
     <script src="script.js"></script>
 </body>
 </html>
