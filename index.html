@@ -15,7 +15,7 @@
     </header>
     <div id="loader"></div>
     <main></main>
-    <form action="" class="calculator">
+    <form id="calculator" action="" class="calculator">
 <label for="url"><h5>Your web page address</h5> </label>
 <div class="form-group"> 
     <span>https://</span>
@@ -41,31 +41,9 @@
 <button type="submit" class="calc_btn" name="submit">Calculate</button>
 
     </form>
-<table id="list">
-    <thead>
-        <tr>
-          <th>Energy</th>
-          <th>co2</th>
-          <th>Green</th>
-          <th>Performance</th>
-          <th>Timing</th>
-          <th>Loading Experince</th>
-          <th>Responsive images</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-</table>
 
-    <template id="carbon_template">
-        <tr><td data-field="energy">energy</td> 
-            <td data-field="co2"></td>
-             <td data-field="green"></td> 
-             <td data-field="performance"></td> 
-             <td data-field="timing"></td> 
-             <td data-field="overall_loading_experience"></td> 
-             <td data-field="responsive_images"></td> 
-        </tr>
-    </template>
     <script src="script.js"></script>
+    <script src="results.js"></script>
+ 
 </body>
 </html>
