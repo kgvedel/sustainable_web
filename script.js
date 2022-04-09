@@ -58,9 +58,13 @@ function prepareObjects(jsonObject){
 carbon.energy = jsonObject.statistics.energy;
 carbon.co2 = jsonObject.statistics.co2;
 carbon.green = jsonObject.green;
+carbon.performance = jsonObject.lighthouseResult.categories.performance.score;
+carbon.timing = jsonObject.lighthouseResult.timing;
+carbon.overall_loading_experience = jsonObject.loadingExperience.overall_category;
+carbon.responsive_images = jsonObject.lighthouseResult.audits.uses-responsive-images;
 
 
-        console.log(carbon);
+console.log(carbon);
 
 allData.push(carbon);
 console.log(allData);
