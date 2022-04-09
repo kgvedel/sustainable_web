@@ -49,6 +49,7 @@ function loadJsonCarbon(){
 
 //lighthouseResult.categories.performance.score 
 //lighthouseResult.timing
+//lighthouseResult.audits.uses-responsive-images
 //loadingExperience.overall_category
 
 function prepareObjects(jsonObject){
