@@ -6,18 +6,18 @@
 //Det overstående er klaret
 
 //vi mangler: Clone, åbne nyt site ved calculate og forms
-
 const form = document.querySelector("form.calculator");
-const user_url = form.elements.url.value;
 
 form.addEventListener("submit", calculate);
 
 function calculate(event) {
-    /* fetch("https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=" + user_url).then(res => res.json()).then(console.log); */
-    fetch("https://kea-alt-del.dk/websitecarbon/site/?url=" + user_url).then(res => res.json()).then(console.log);
-    event.preventDefault();
-    /* showDetails(); */
-    /* console.log("test" + user_url); */
+    const user_url = form.elements.url.value;
+    
+    const pageInsightApiKey = "AIzaSyB5TMLidzXZG4KFFbQjWVmGv1bfUYPrDGg";
+  let pageSpeed =  fetch( `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${user_url}&key=${pageInsightApiKey}`).then(res => res.json()).then(console.log);
+    
+  let carbon =  fetch(`https://kea-alt-del.dk/websitecarbon/site/?url=${user_url}`).then(res => res.json()).then(console.log);
+   event.preventDefault();
 }
 
 /* function showDetails(){
@@ -25,4 +25,3 @@ function calculate(event) {
     
 }
  */
-

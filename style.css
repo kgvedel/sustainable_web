@@ -64,7 +64,6 @@ h6{
 
 
 /*STYLING OF BUTTONS*/
-
   .calc_btn{
     text-align: center;
     padding: 8px 12px;
@@ -182,3 +181,4 @@ border-bottom-right-radius: 10px;
   body .form-group:not(:last-child) {
     margin-bottom: 32px;
   }
+
