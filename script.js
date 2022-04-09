@@ -41,6 +41,10 @@ function loadJsonCarbon(){
 }
 
 
+//lighthouseResult.categories.performance.score 
+//lighthouseResult.timing
+//loadingExperience.overall_category
+
 function prepareObjects(jsonObject){
    
         const carbon = Object.create(dataCarbon);
