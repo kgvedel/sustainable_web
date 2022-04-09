@@ -54,6 +54,8 @@ carbon.green = jsonObject.green;
 
 allData.push(carbon);
 console.log(allData);
+
+displayList();
 }
 
 
@@ -67,13 +69,12 @@ function displayList(){
 }
 
 function displayData(carbon){
-    const clone = document.querySelector("template #carbon_template").content.cloneNode(true);
+    const clone = document.querySelector("#carbon_template").content.cloneNode(true);
 
     clone.querySelector("[data-field=energy]").textContent = carbon.energy;
-    clone.querySelector("[data-field=co2]").textContent = carbon.co2;
+    clone.querySelector("[data-field=co2]").textContent = carbon.co2.grid.grams + " grams";
     clone.querySelector("[data-field=green]").textContent = carbon.green;
 
-    console.log
 
     document.querySelector("#list tbody").appendChild(clone);
 
