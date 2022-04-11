@@ -1,0 +1,2 @@
+Begge sider til at fungere:
+ved klik på side med URL og input 1 - henvis til side 2
