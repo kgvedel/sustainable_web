@@ -1,0 +1,8 @@
+Begge sider til at fungere:
+ved klik på side med URL og input 1 - henvis til side 2
+Post til vores database ved klik 
+Opret database
+
+
+
+vores webpage API key: 6254481067937c128d7c96cc
