@@ -20,7 +20,7 @@ function calculate(event) {
 
     event.preventDefault();
    
-    location.href = "resolve.html";
+    /* location.href = "resolve.html"; */
 
     
 }
