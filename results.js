@@ -1,14 +1,5 @@
 
-const allData = [];
-const dataCarbon = {
-    energy: "",
-    co2: "",
-    green: "",
-    performance: "",
-    timing: "",
-    overall_loading_experience: "",
 
-};
 
 function start(){
     showDetails();
@@ -41,21 +32,20 @@ function loadJsonCarbon() {
 //lighthouseResult.audits.uses-responsive-images
 //loadingExperience.overall_category
 
-function preparePageObjects(jsonObject) {
+/* function preparePageObjects(jsonObject) {
 
-    const page = Object.create(dataCarbon);
-
-
-    page.performance = jsonObject.lighthouseResult.categories.performance.score;
-    page.timing = jsonObject.lighthouseResult.timing.total;
-    page.overall_loading_experience = jsonObject.loadingExperience.overall_category;
+    const carbon = Object.create(dataCarbon);
 
 
+    carbon.performance = jsonObject.lighthouseResult.categories.performance.score;
+    carbon.timing = jsonObject.lighthouseResult.timing.total;
+    carbon.overall_loading_experience = jsonObject.loadingExperience.overall_category;
 
-    console.log(page);
 
-    allData.push(page);
-    console.log(allData);
+
+    
+
+    allData.push(carbon);
 
     displayList();
 }
@@ -70,20 +60,24 @@ function prepareCarbonObjects(jsonObject) {
     carbon.green = jsonObject.green;
 
 
-    console.log(carbon);
+    
 
     allData.push(carbon);
-    console.log(allData);
+    
 
     displayList();
 }
-
+ */
 
 
 function displayList() {
     //clearing the list
     document.querySelector("#list tbody").innerHTML = "";
-    allData.forEach(displayData);
+   allData.forEach(displayData);
+ 
+    console.log(allData);
+    
+
 
 }
 
