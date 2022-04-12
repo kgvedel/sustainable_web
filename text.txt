@@ -5,4 +5,19 @@ Opret database
 
 
 
-vores webpage API key: 6254481067937c128d7c96cc
+vores webpage API key: 625474ee67937c128d7c96d6
+
+
+
+//done:
+//1 grib submit
+//2 preventDefault
+//læse url fra bruger
+//fetch fra lokal fil
+//gem som object
+//post object til database
+//tilføj section og url navn
+
+//TODO:
+//skift side - EFTER post er færdig... (har problemer med det her)
+//get seneste post - fra result.script

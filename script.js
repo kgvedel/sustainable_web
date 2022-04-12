@@ -1,92 +1,114 @@
-//1 grib submit
-//2 preventDefault
-//læse url fra bruger
-//fetch fra lokal fil
 
-//Det overstående er klaret
 
-//vi mangler: Clone, åbne nyt site ved calculate og forms
+//vi mangler: Clone, åbne nyt siteData ved calculate og forms
+
+//
 
 const allData = [];
 
 const dataCarbon = {
-    web_url: "url",
-    energy: "",
-    co2: "",
-    green: "",
-    performance: "",
-    timing: "",
-    loading_experience: "smth",
-
+  web_url: "url",
+  energy: "",
+  co2: "",
+  green: false,
+  performance: "",
+  timing: "",
+  loading_experience: "",
+  section:""
 };
 
 
 
+window.addEventListener('DOMContentLoaded',start);
+function start(){
+  form.addEventListener("submit", calculate);
+
+}
+
 const form = document.querySelector("#calculator");
 
- form.addEventListener("submit", calculate);
-
-// const user_url = form.elements.url.value;
 
 function calculate(event) {
 
   event.preventDefault();
+  getData();
 
-   /*   const pageInsightApiKey = "AIzaSyB5TMLidzXZG4KFFbQjWVmGv1bfUYPrDGg";
-    let pageSpeed =  fetch( `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${user_url}&key=${pageInsightApiKey}`).then(res => res.json()).then(console.log); */
-
-    /*  fetch(`https://kea-alt-del.dk/websitecarbon/site/?url=${user_url}`).then(res => res.json()).then(console.log);*/
-
-
-   fetch(`kea.json`).then(res => res.json()).then(jsonData => { prepareCarbonObjects(jsonData) });
-  fetch(`page.json`).then(res => res.json()).then(jsonData => { preparePageObjects(jsonData) }); 
-
-
-  const carbon = Object.create(dataCarbon);
-   function preparePageObjects(jsonObject) {
-    carbon.performance = jsonObject.lighthouseResult.categories.performance.score;
-    carbon.timing = jsonObject.lighthouseResult.timing.total;
-    carbon.overall_loading_experience = jsonObject.loadingExperience.overall_category;
-    
 }
 
 
-function prepareCarbonObjects(jsonObject) {
-    carbon.energy = jsonObject.statistics.energy;
-    carbon.co2 = jsonObject.statistics.co2.grid.grams;
-    carbon.green = jsonObject.green;
-}
+
+
+const APIKEY = "625474ee67937c128d7c96d6";
+const endpoint = "https://sustainable-485c.restdb.io/rest/company";
+
+async function getData() {
+  const url = form.elements.url.value;
+
+  console.log(url);
+ 
+ 
  
 
-  
-   
-   //  location.href = "resolve.html";
+  const pageInsightApiKey = "AIzaSyB5TMLidzXZG4KFFbQjWVmGv1bfUYPrDGg";
+  const pageSpeed = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${pageInsightApiKey}`;
 
-   allData.push(carbon);
- post(carbon);
-  
+  const websiteCarbon = `https://kea-alt-del.dk/websitecarbon/site/?url=${url}`;
 
-    
+
+
+  const requestPage = await fetch("page.json");
+  const pageData = await requestPage.json();
+
+
+  const requestCarbon = await fetch("kea.json");
+  const carbonData = await requestCarbon.json();
+
+
+  const result = prepareObject(carbonData, pageData);
+  console.log(result);
+
+  post(result);
+
+
+
+}
+
+
+function prepareObject(jsonDataC, jsonDataP) {
+  const siteData = Object.create(dataCarbon);
+  siteData.performance = jsonDataP.lighthouseResult.categories.performance.score;
+  siteData.timing = jsonDataP.lighthouseResult.timing.total;
+  siteData.loading_experience = jsonDataP.loadingExperience.overall_category;
+  siteData.web_url = jsonDataC.url;
+  siteData.energy = jsonDataC.statistics.energy;
+  siteData.co2 = jsonDataC.statistics.co2.grid.grams;
+  siteData.green = jsonDataC.green;
+ siteData.section = form.elements.select_industry.value;
+
+
+  return siteData;
+
 }
 
 
 
 
 
-const APIKEY = "6254481067937c128d7c96cc";
-const endpoint = "https://sustainable-485c.restdb.io/rest/company ";
+function post(postData) {
 
-function post(payload) {
+  postData = JSON.stringify(postData);
+
   fetch(endpoint, {
-    method: "POST",
+    method: "post",
     headers: {
-      "x-apikey": APIKEY,
       "Content-Type": "application/json",
+      "x-apikey": APIKEY,
     },
-    body: JSON.stringify(payload),
+    body: postData,
   })
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => console.log(data))
+    .then( location.href = "resolve.html");
 }
 
 
