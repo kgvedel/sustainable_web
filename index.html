@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustainable Web</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <main>
+ 
     <header>
         <h1>Sustainable Web</h1>
+        <h1>Calculator</h1>
         <div class="header_graphic"></div>
     </header>
     <div id="loader"></div>
-    <main></main>
+  
     <form id="calculator" action="" class="calculator">
-<label for="url"><h5>Your web page address</h5> </label>
+<label for="url"><h6>Your webpage address</h6> </label>
 <div class="form-group" name="group"> 
     <span>https://</span>
     <input type="text" placeholder="Web page URL" name="url">
 </div>
-
+<label for="select_industry"> <h6>Select your industry</h6></label>
 <div class="form-group">
-<label for="select_industry"> <h6>Select industry</h6></label>
     <select name="select_industry" id="select_industries">
         <option value="Select Industry" disabled selected hidden>Select Industry</option>
         <option value="Agriculture / Food Production">Agriculture / Food Production</option>
@@ -39,10 +43,11 @@
         <option value="Other">Other</option>
     </select>
 </div>
+
 <button type="submit" class="calc_btn" name="submit">Calculate</button>
 
     </form>
-
+</main>
     <script src="script.js"></script>
 
  
