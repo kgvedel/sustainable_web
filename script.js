@@ -33,14 +33,14 @@ function calculate(event) {
     event.preventDefault();
 
 
-  getData();
+    location.href = "resolve.html";
 
 }
 
 
 
 
-const APIKEY = "625474ee67937c128d7c96d6";
+/* const APIKEY = "625474ee67937c128d7c96d6";
 const endpoint = "https://sustainable-485c.restdb.io/rest/company";
 
 async function getData() {
@@ -112,7 +112,7 @@ function post(postData) {
   })
     .then((res) => res.json())
     .then((data) => console.log(data));
-}
+} */
 
 
 

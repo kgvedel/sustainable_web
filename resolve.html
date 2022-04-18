@@ -38,22 +38,24 @@
     <main id="main"> 
     <section id="result_section">
         <h1>Your websites sustainability:</h1>
-        <div class="results_container">   </div>
             <!--Result after initial calculation-->
             <div class="info_box_border"> 
             <div id="your_result" class="result_card">
-                <h2>This is your results!</h2>
-                <template id="carbon_template">
-                    <tr>
-                        <td data-field="energy"></td> 
-                        <td data-field="co2"></td>
-                         <td data-field="green"></td> 
-                         <td data-field="performance"></td> 
-                         <td data-field="timing"></td> 
-                         <td data-field="overall_loading_experience"></td> 
-                      
-                    </tr>
-                </template>
+                
+
+                <table id="list">
+                    <thead>
+                        <tr>
+                          <th>Energy</th>
+                          <th>co2</th>
+                          <th>Green</th>
+                          <th>Performance</th>
+                          <th>Timing</th>
+                          <th>Loading Experince</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                </table>
             </div>
         </div>
 
@@ -171,21 +173,20 @@
     </section>
 </main>
 
+<template id="carbon_template">
+    <tr>
+        <td data-field="energy"></td> 
+        <td data-field="co2"></td>
+         <td data-field="green"></td> 
+         <td data-field="performance"></td> 
+         <td data-field="timing"></td> 
+         <td data-field="overall_loading_experience"></td> 
+      
+    </tr>
+</template>
 <!-- 
 
-    <table id="list">
-        <thead>
-            <tr>
-              <th>Energy</th>
-              <th>co2</th>
-              <th>Green</th>
-              <th>Performance</th>
-              <th>Timing</th>
-              <th>Loading Experince</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-    </table> -->
+ -->
 
 
         <!-- Template for when you change it card -->
