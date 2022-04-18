@@ -37,6 +37,9 @@ function calculate(event) {
     event.preventDefault();
 
     const url = form.elements.url.value;
+
+
+
     localStorage. setItem("url", url);
     localStorage. setItem("industry", industry);
 
