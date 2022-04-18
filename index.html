@@ -11,19 +11,18 @@
 
     <header>
         <h1>Sustainable Web</h1>
-        <div class="header_graphic"></div>
     </header>
-    <div id="loader"></div>
     <main></main>
+    <div class="form_background"> 
     <form id="calculator" action="" class="calculator">
 <label for="url"><h5>Your web page address</h5> </label>
 <div class="form-group"> 
-    <span>https://</span>
-    <input type="text" placeholder="Web page URL" id="url" name="url">
+    <span class="img_icon"><img src="images/floatingcity.svg" alt="Icon"></span>
+    <input type="text" placeholder="HTTPS://" id="url" name="url">
 </div>
 
 <div class="form-group">
-<label for="select_industries"> <h6>Select industry</h6></label>
+<label for="select_industries">
     <select name="select_industries" id="select_industries">
         <option value="" disabled selected hidden>Select Industry</option>
         <option value="">Agriculture / Food Production</option>
@@ -37,11 +36,12 @@
         <option value="">The Energy Sector</option>
         <option value="">The Grocery Store</option>
     </select>
+</label>
 </div>
 <button type="submit" class="calc_btn" name="submit">Calculate</button>
 
     </form>
-
+</div>
     <script src="script.js"></script>
     <script src="results.js"></script>
  
