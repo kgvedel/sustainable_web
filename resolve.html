@@ -6,20 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resolve</title>
+    <link rel="stylesheet" href="resolve.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <main id="main"> 
     <section id="result_section">
         <h1>Your websites sustainability:</h1>
-        <div class="results_container">
+        <div class="results_container">   </div>
             <!--Result after initial calculation-->
             <div id="your_result" class="result_card">
+                <h2>This is your results!</h2>
                 <template id="carbon_template">
                     <tr>
-                        <td data-field="energy">energy</td> 
+                        <td data-field="energy"></td> 
                         <td data-field="co2"></td>
                          <td data-field="green"></td> 
                          <td data-field="performance"></td> 
@@ -28,23 +31,29 @@
                       
                     </tr>
                 </template>
+            </div>
 
-                <div class="filter">
+            <!--     <div class="filter">
                     <p>See how your website differentiates from other categories</p>
-                </div>
+                </div> -->
+
+<section> 
+    <h3>What changes can be done?</h3>
+    <p>Try change the results and check the card next to you. With this, 
+        you will be able to see what more that can be done in order to change your score.</p>
+
                 <div class="result_graphics">
-                    <h3>What changes can be done?</h3>
-                    <p>Try change the results and check the card next to you. With this, 
-                        you will be able to see what more that can be done in order to change your score.</p>
-                    <!--INSERT ELEMENTS AND GRAPHICSSTUFF HERE FOR THE CALCULATED RESULT-->
+                
 
-                    <form action="">
+                    <form>
 <label for="website_name">Insert shortened URL of website
-<span class="hint">No need for HTTPS:// or WWW</span>
+<span class="hidden">No need for HTTPS:// or WWW</span>
 </label>
+<div class="form-group"> 
 <input type="text" id="website_name" name="website_name">
-
+</div>
     <label for="headers">Shortened headers</label>
+    <div class="form-group"> 
     <input type="range"
     step=".01"
     min="0"
@@ -53,9 +62,13 @@
     id="headers"
     name="headers"
     >
+</div>
 
 
     <label for="images">How many images is on your current website?</label>
+
+    <div class="form-group"> 
+    
     <input type="range"
     step=".01"
     min="0"
@@ -64,36 +77,77 @@
     id="images"
     name="images"
     >
+</div>
 
 <label for="image_type">How do you want your images?</label>
 <p>WEPD is a format that pocess all properties as JPEG and PNG. It is also a more green approach, because it is possible to compress images to a much smaller size and still gain a good image for a website. Take these considerations when making a website that contains many images.</p>
+
+<div class="form-group-radio"> 
+    <div class="style"> 
 <input type="radio" id="wepd" name="image_type" value="wepd">
-  <label for="wepd">WEPD</label><br>
+  <label for="wepd">WEPD</label> </div>
+  <br>
+  <div class="style"> 
   <input type="radio" id="jpeg" name="image_type" value="jpeg">
   <label for="jpeg">JPEG</label>
-  <span class="jpeg_hint">Are you sure JPEG is a good option for that amount of images?</span><br>
+</div>
+  <span class="hidden">Are you sure JPEG is a good option for that amount of images?</span><br>
+  <div class="style"> 
   <input type="radio" id="png" name="image_type" value="png">
   <label for="png">PNG</label>
-  <span class="png_hint">Are you sure PNG is a good option for that amount of images?</span>
-
+</div>
+  <span class="hidden">Are you sure PNG is a good option for that amount of images?</span>
+</div>
 
 
                     </form>
-                </div>
-            </div>
-            <!--Result calculated after improvements-->
-            <div id="improved_result" class="result_card">
-                <div class="result_graphics">
-                    <!--INSERT ELEMENTS AND GRAPHICSSTUFFS HERE FOR THE IMPROVED RESULT-->
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="improve_section">
-        <!--INSERT UI ELEMENTS, RADIOBUTTONS, ETC HERE FOR IMPROVING RESULT -> NEW RESULT-->
-
+                    <article class="the_end_card"> 
+                        <header>
+                            <h3>Your green card</h3>
+                            <p>....Not that kind of green card</p>
+                        </header>
+            
+                        <section>
+                            <h3>Company name</h3>
+                        </section>
+            <section>
+                <h3>Your overall performance</h3>
+                <p data-field="performance"></p>
+            </section>
+            <section>
+                <h3>Your overall loading experience</h3>
+                <p data-field="overall_loading_experience"></p>
+            </section>
+            
+            <section>
+                <h3>Timing when running the website</h3>
+                <p data-field="timing"></p>
+            </section>
+            
+            <section>
+                <h3>Energy used</h3>
+                <p data-field="energy"></p>
+            </section>
+            
+            
+            <section>
+                <h3>Your sites co2 leverage</h3>
+                <p data-field="co2"></p>
+            </section>
+            
+            <section>
+                <h3>Is your site Green?</h3>
+                <p data-field="green"></p>
+            </section>
+            
+                    </article>
+                </div>
+            </section>
     </section>
+</main>
+
+<!-- 
 
     <table id="list">
         <thead>
@@ -107,50 +161,10 @@
             </tr>
           </thead>
           <tbody></tbody>
-    </table>
+    </table> -->
 
 
-        <!-- Template for when you change it -->
-        <article class="card"> 
-            <header>
-                <h3>Your green card</h3>
-                <p>....Not that kind of green card</p>
-            </header>
-
-            <section>
-                <h3>Company name</h3>
-            </section>
-<section>
-    <h3>Your overall performance</h3>
-    <p data-field="performance"></p>
-</section>
-<section>
-    <h3>Your overall loading experience</h3>
-    <p data-field="overall_loading_experience"></p>
-</section>
-
-<section>
-    <h3>Timing when running the website</h3>
-    <p data-field="timing"></p>
-</section>
-
-<section>
-    <h3>Energy used</h3>
-    <p data-field="energy"></p>
-</section>
-
-
-<section>
-    <h3>Your sites co2 leverage</h3>
-    <p data-field="co2"></p>
-</section>
-
-<section>
-    <h3>Is your site Green?</h3>
-    <p data-field="green"></p>
-</section>
-
-        </article>
+        <!-- Template for when you change it card -->
 
     <script src="results.js"></script>
 

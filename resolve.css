@@ -1,0 +1,123 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+/* results and change card styling
+ */
+
+.result_card{
+    border: solid red 1px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: 1rem;
+    align-self: start;
+    background-color: azure;
+    transition: 1s;
+
+}
+
+.result_card:hover{
+    box-shadow: 5px 6px  black;
+    transition: 1s;
+    transform: scale(1.01);
+
+}
+
+.the_end_card{
+    border: solid red 1px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: 1rem;
+    align-self: start;
+    background-color: azure;
+    transition: 1s;
+}
+.the_end_card:hover{
+    box-shadow: 5px 6px  black;
+    transition: 1s;
+    transform: scale(1.01);
+}
+
+.result_graphics{
+    margin: auto;
+    gap: 4rem;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    max-width: 1000px;
+}
+
+.style{
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5rem;
+    
+    padding: 0.5rem;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.325);
+}
+
+/* .style:hover{
+    background-color: aquamarine;
+} */
+.form-group-radio{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1rem;
+    line-height: 1.1;
+}
+
+input[type="radio"] {
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+
+    color: pink;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 0.15em solid black;
+    border-radius: 50%;
+    transition: 1s;
+
+
+  }
+
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 10px 10px aqua;
+  }
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+
+
+   .style:hover{
+      background-color: aqua;
+      transition: 1s;
+  }
+
+
+
+
+.hidden{
+    display: none;
+}
+
