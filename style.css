@@ -1,5 +1,5 @@
 :root {
-  --background-color: #87DEF5;
+  --background-color: #2a60b671;
   --white: #ffff;
   --dark-black: #161519;
 
@@ -8,6 +8,7 @@
   --mid-pink: #ff7dbf;
   --light-pink: #ff99cd;
   --darkest-blue: #003180;
+  --sat-blue: #003180b9;
   --mid-blue: #123f89;
   --light-blue: #2a60b6;
   --green: #aad900;
@@ -15,7 +16,7 @@
   --input-color: var(--mid-blue);
   --input-border: var(--dark-pink);
   --input-background: var(--white);
-  --input-placeholder: var(--light-pink);
+  --input-placeholder: var(--sat-blue);
   --input-border-focus: var(--darkest-blue);
   --group-color: var(--white);
   --group-border: var(--hotpink);
@@ -160,17 +161,17 @@ label h6 {
 }
 
 .header_title{
-  display: flex;
-  flex-direction: column;
-  margin:3rem;
+  margin:3rem auto;
 }
-.header_title h4{
+.header_title h2{
   margin-top:0.4rem;
   margin-left: -0.5rem;
-  align-self: center;
+  font-size: 3rem;
+  text-align: center;
   color: var(--white);
   text-transform:uppercase;
   font-weight: 700;
+  text-shadow: 6px 1px 0px var(--darkest-blue);
 }
 
 #text_box{
@@ -181,8 +182,8 @@ max-width: 600px;
 #info {
   background-color: var(--darkest-blue);
   color: var(--light-pink);
-  border-radius: 10px;
-  padding: 8px 18px;
+  border-radius: 20px;
+  padding: 20px 30px;
   line-height: 25px;
 margin-top: -1rem;
 }
@@ -195,8 +196,9 @@ margin-top: -1rem;
 /*STYLING OF BUTTONS, input, formstuff*/
 
 .calc_btn {
+  margin: 1rem;
   text-align: center;
-  align-self: flex-end;
+  align-self: center;
   padding: 8px 12px;
   font-size: 14px;
   font-weight: 700;
@@ -216,26 +218,29 @@ margin-top: -1rem;
 .calc_btn:hover {
   transform: scale(0.95);
   transition: 1s;
-  background-color: var(--hot-pink);
-
+  background-color: var(--mid-pink);
+color: var(--dark-pink);
   box-shadow: 6px 6px 1px 0 var(--white) inset, -8px -8px 1px 0 var(--dark-pink) inset;
 }
 
 select {
+  cursor: pointer;
+  font-weight: 600;
+  height: 2rem;
   margin: auto;
   width: 100%;
   height: 50px;
   text-align: center;
   color: var(--group-color);
   background: var(--darkest-blue);
-
+border-style: none;
   border-radius: 10px;
 }
 
 input {
   display: block;
   width: 100%;
-  height: 2.5rem;
+  height: 2rem;
   padding: 8px 16px;
   line-height: 25px;
   font-size: 14px;
@@ -287,4 +292,152 @@ input:focus {
 
 body .form-group:not(:last-child) {
   margin-bottom: 20px;
+}
+
+
+/* CLOUDS taken from codepen #extraspicy */
+
+#background-wrap {
+  bottom: 0;
+left: 0;
+padding-top: 50px;
+position: fixed;
+right: 0;
+top: 0;
+z-index: -1;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateCloud {
+  0% {
+      margin-left: -1000px;
+  }
+  100% {
+      margin-left: 100%;
+  }
+}
+
+@-moz-keyframes animateCloud {
+  0% {
+      margin-left: -1000px;
+  }
+  100% {
+      margin-left: 100%;
+  }
+}
+
+@keyframes animateCloud {
+  0% {
+      margin-left: -1000px;
+  }
+  100% {
+      margin-left: 100%;
+  }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+-webkit-animation: animateCloud 35s linear infinite;
+-moz-animation: animateCloud 35s linear infinite;
+animation: animateCloud 35s linear infinite;
+
+-webkit-transform: scale(0.65);
+-moz-transform: scale(0.65);
+transform: scale(0.65);
+}
+
+.x2 {
+-webkit-animation: animateCloud 20s linear infinite;
+-moz-animation: animateCloud 20s linear infinite;
+animation: animateCloud 20s linear infinite;
+
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+.x3 {
+-webkit-animation: animateCloud 30s linear infinite;
+-moz-animation: animateCloud 30s linear infinite;
+animation: animateCloud 30s linear infinite;
+
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+}
+
+.x4 {
+-webkit-animation: animateCloud 18s linear infinite;
+-moz-animation: animateCloud 18s linear infinite;
+animation: animateCloud 18s linear infinite;
+
+-webkit-transform: scale(0.4);
+-moz-transform: scale(0.4);
+transform: scale(0.4);
+}
+
+.x5 {
+-webkit-animation: animateCloud 25s linear infinite;
+-moz-animation: animateCloud 25s linear infinite;
+animation: animateCloud 25s linear infinite;
+
+-webkit-transform: scale(0.55);
+-moz-transform: scale(0.55);
+transform: scale(0.55);
+}
+
+/* OBJECTS */
+
+.cloud {
+background: #fff;
+background: -moz-linear-gradient(top,  #fff 5%, #f1f1f1 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fff), color-stop(100%,#f1f1f1));
+background: -webkit-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+background: -o-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+background: -ms-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f1f1f1',GradientType=0 );
+
+-webkit-border-radius: 100px;
+-moz-border-radius: 100px;
+border-radius: 100px;
+
+-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+
+height: 120px;
+position: relative;
+width: 350px;
+}
+
+.cloud:after, .cloud:before {
+  background: #fff;
+content: '';
+position: absolute;
+z-indeX: -1;
+}
+
+.cloud:after {
+-webkit-border-radius: 100px;
+-moz-border-radius: 100px;
+border-radius: 100px;
+
+height: 100px;
+left: 50px;
+top: -50px;
+width: 100px;
+}
+
+.cloud:before {
+-webkit-border-radius: 200px;
+-moz-border-radius: 200px;
+border-radius: 200px;
+
+width: 180px;
+height: 180px;
+right: 50px;
+top: -90px;
 }
