@@ -4,9 +4,103 @@
   box-sizing: border-box;
 }
 
+:root {
+  
+    --white: #ffff;
+    --whiteish: rgb(253, 246, 251);
+    --dark-black: #161519;
+  
+    --dark-pink: #e7529c;
+    --hotpink: #ff69b4;
+    --mid-pink: #ff7dbf;
+    --light-pink: #ff99cd;
+    --darkest-blue: #003180;
+    --mid-blue: #123f89;
+    --light-blue: #2a60b6;
+    --green: #aad900;
+  
+    --input-color: var(--mid-blue);
+    --input-border: var(--dark-pink);
+    --input-background: var(--white);
+    --input-placeholder: var(--light-pink);
+    --input-border-focus: var(--darkest-blue);
+    --group-color: var(--white);
+    --group-border: var(--hotpink);
+    --group-background: var(--darkest-blue);
+    --group-color-focus: var(--white);
+    --group-border-focus: var(--input-border-focus);
+    --group-background-focus: var(--dark-pink);
+  
+  
+  }
 
 /* results and change card styling
  */
+
+ 
+
+main{
+    max-width:1400px ;
+    margin: 0 auto;
+    
+}
+
+
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans";
+}
+
+input,
+button,
+label,
+select,
+span {
+  font-family: "Open Sans";
+}
+p {
+  font-size: 16px, 1em;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 5.553rem;
+  color: var(--mid-pink);
+  font-weight: 700;
+  font-family: "Big Shoulders Display", "Open Sans";
+  text-transform: uppercase;
+  text-shadow: 8px 1px 0px var(--darkest-blue);
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.998rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.627rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.400rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.314rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 
 .result_card{
     border: solid red 1px;
@@ -18,27 +112,30 @@
     background-color: azure;
     transition: 1s;
 
+    padding: 5px 12px;
+
 }
 
 .result_card:hover{
-    box-shadow: 5px 6px  black;
+    box-shadow: 5px 6px  var(--darkest-blue);
     transition: 1s;
     transform: scale(1.01);
 
 }
 
 .the_end_card{
-    border: solid red 1px;
+    color: var(--light-pink);
+    border: solid var(--darkest-blue) 1px;
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
     gap: 1rem;
     align-self: start;
-    background-color: azure;
+    background-color: var(--mid-blue);
     transition: 1s;
 }
 .the_end_card:hover{
-    box-shadow: 5px 6px  black;
+    box-shadow: 5px 6px  var(--hotpink);
     transition: 1s;
     transform: scale(1.01);
 }
