@@ -1,0 +1,21 @@
+{
+    "url": "https://www.facebook.com/",
+    "green": true,
+    "bytes": 433086,
+    "cleanerThan": 0.83,
+    "statistics": {
+        "adjustedBytes": 326979.93,
+        "energy": 0.000549665441410616,
+        "co2": {
+            "grid": {
+                "grams": 0.2610910846700426,
+                "litres": 0.1452188612934777
+            },
+            "renewable": {
+                "grams": 0.23662367297020828,
+                "litres": 0.13161008690602985
+            }
+        }
+    },
+    "timestamp": 1650271687
+}
