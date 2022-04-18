@@ -170,13 +170,8 @@ max-width: 580px;
 #info {
   background-color: var(--darkest-blue);
   color: var(--light-pink);
-<<<<<<< HEAD
-  border-radius: 20px;
-  padding: 20px 30px;
-=======
   border-radius: 10px;
   padding: 8px 12px;
->>>>>>> 4084ab3432e35a5ac22848f79ce712f5f86db6f1
   line-height: 25px;
 margin-top: -1rem;
 }
