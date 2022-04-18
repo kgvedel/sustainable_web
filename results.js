@@ -18,16 +18,18 @@ const dataCarbon = {
 };
 
 
-
-const url = localStorage.getItem("url");
 const industry = localStorage.getItem("industry");
+const url = localStorage.getItem("url");
+
 window.addEventListener('DOMContentLoaded', start);
 function start() {
   getData();
 
 }
 
-//const form = document.querySelector("#calculator");
+
+
+
 
 
 
@@ -94,7 +96,7 @@ function prepareObject(jsonDataC, jsonDataP) {
   siteData.green = jsonDataC.green;
   siteData.section = industry;
 
-
+  
 
   return siteData;
 
