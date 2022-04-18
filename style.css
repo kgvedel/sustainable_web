@@ -1,5 +1,5 @@
 :root {
-  --background-color: #242427;
+  --background-color: #87DEF5;
   --white: #ffff;
   --dark-black: #161519;
 
@@ -61,7 +61,7 @@ body {
 
 main {
   margin: 1.5rem;
-  grid-template-columns: 1fr 1.8fr;
+  grid-template-columns: 1.2fr 1.6fr;
   display: grid;
   justify-content: center;
 }
@@ -69,11 +69,12 @@ main {
 #form_section {
   background-image: url(images/floating_city.svg);
   background-repeat: no-repeat;
-  padding-top: 5.8rem;
+  padding-top: 5.5rem;
   /* background-size: 100% 100%; */
   background-size: contain;
-  background-position: 56%;
+  background-position: 60%;
   min-height: 800px;
+
 }
 
 form {
@@ -84,6 +85,7 @@ form {
   align-self: center;
   margin: 0 auto;
   margin-top: 13rem;
+  
 }
 
 /*STYLING OF FONTS*/
@@ -92,7 +94,8 @@ p,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: "Open Sans";
 }
 
@@ -105,11 +108,11 @@ span {
 }
 p {
   font-size: 16px, 1em;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h1 {
-  font-size: 5.553rem;
+  font-size: 5.653rem;
   color: var(--white);
   font-weight: 700;
   font-family: "Big Shoulders Display", "Open Sans";
@@ -129,7 +132,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.799rem;
+  font-size: 1.699rem;
   font-weight: 500;
 }
 
@@ -139,7 +142,7 @@ h5 {
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
@@ -148,7 +151,48 @@ label h6 {
   color: var(--darkest-blue);
 }
 
-/*STYLING OF BUTTONS*/
+/*frontpage - info title -  left section*/
+#info_section {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+}
+
+.header_title{
+  display: flex;
+  flex-direction: column;
+  margin:3rem;
+}
+.header_title h4{
+  margin-top:0.4rem;
+  margin-left: -0.5rem;
+  align-self: center;
+  color: var(--white);
+  text-transform:uppercase;
+  font-weight: 700;
+}
+
+#text_box{
+  margin-left:3rem;
+max-width: 600px;
+}
+
+#info {
+  background-color: var(--darkest-blue);
+  color: var(--light-pink);
+  border-radius: 10px;
+  padding: 8px 18px;
+  line-height: 25px;
+margin-top: -1rem;
+}
+
+.header_graphics{
+  margin: 0 2rem;
+  max-width: 620px;
+}
+
+/*STYLING OF BUTTONS, input, formstuff*/
 
 .calc_btn {
   text-align: center;
@@ -183,7 +227,7 @@ select {
   height: 50px;
   text-align: center;
   color: var(--group-color);
-  background: var(--group-background);
+  background: var(--darkest-blue);
 
   border-radius: 10px;
 }
@@ -239,11 +283,8 @@ input:focus {
 .form-group:focus-within > span {
   color: var(--group-color-focus);
   background: var(--group-background-focus);
-
 }
 
 body .form-group:not(:last-child) {
   margin-bottom: 20px;
 }
-
-
