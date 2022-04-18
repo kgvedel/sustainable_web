@@ -112,7 +112,7 @@ p {
 }
 
 h1 {
-  font-size: 5.653rem;
+  font-size: 5.553rem;
   color: var(--white);
   font-weight: 700;
   font-family: "Big Shoulders Display", "Open Sans";
@@ -175,21 +175,21 @@ label h6 {
 
 #text_box{
   margin-left:3rem;
-max-width: 600px;
+max-width: 580px;
 }
 
 #info {
   background-color: var(--darkest-blue);
   color: var(--light-pink);
   border-radius: 10px;
-  padding: 8px 18px;
+  padding: 8px 12px;
   line-height: 25px;
 margin-top: -1rem;
 }
 
 .header_graphics{
-  margin: 0 2rem;
-  max-width: 620px;
+  margin: 0 1rem;
+  max-width: 600px;
 }
 
 /*STYLING OF BUTTONS, input, formstuff*/
