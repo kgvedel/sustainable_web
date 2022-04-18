@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,48 +9,61 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <main>
- 
-    <header>
-        <h1>Sustainable Web</h1>
-        <h1>Calculator</h1>
-        <div class="header_graphic"></div>
-    </header>
-    <div id="loader"></div>
-  
-    <form id="calculator" action="" class="calculator">
-<label for="url"><h6>Your webpage address</h6> </label>
-<div class="form-group" name="group"> 
-    <span>https://</span>
-    <input type="text" placeholder="Web page URL" name="url">
-</div>
-<label for="select_industry"> <h6>Select your industry</h6></label>
-<div class="form-group">
-    <select name="select_industry" id="select_industries">
-        <option value="Select Industry" disabled selected hidden>Select Industry</option>
-        <option value="Agriculture / Food Production">Agriculture / Food Production</option>
-        <option value="The Fiancial Sector">The Fiancial Sector</option>
-        <option value="The Clothing and Fashion Industry">The Clothing and Fashion Industry</option>
-        <option value="The Tech and Data Industry">The Tech and Data Industry</option>
-        <option value="The Construction Industry">The Construction Industry</option>
-        <option value="The Transport Sector">The Transport Sector</option>
-        <option value="Culture, Sports and Entertainment Industry">Culture, Sports and Entertainment Industry</option>
-        <option value="The Hotel and Restaruant Industry">The Hotel and Restaruant Industry</option>
-        <option value="The Energy Sector">The Energy Sector</option>
-        <option value="The Grocery Store">The Grocery Store</option>
-        <option value="Other">Other</option>
-    </select>
-</div>
 
-<button type="submit" class="calc_btn" name="submit">Calculate</button>
+        <header>
+            <h1>Sustainable Web</h1>
+            <h1>Calculator</h1>
+            <div class="header_graphic"></div>
+        </header>
+    
+        <form id="calculator" action="" class="calculator">
 
-    </form>
-</main>
+            <label for="url">
+                <h5>Your web page address</h5>
+            </label>
+            <div class="form-group">
+                <span class="img_icon"><img src="images/floatingcity.svg" alt="Icon"></span>
+                <input type="text" placeholder="HTTPS://" id="url" name="url">
+            </div>
+
+            <label for="select_industry">
+                <h6>Select your industry</h6>
+            </label>
+            <div class="form-group">
+                <select name="select_industry" id="select_industries">
+                    <option value="Select Industry" disabled selected hidden>Select Industry</option>
+                    <option value="Agriculture / Food Production">Agriculture / Food Production</option>
+                    <option value="The Fiancial Sector">The Fiancial Sector</option>
+                    <option value="The Clothing and Fashion Industry">The Clothing and Fashion Industry</option>
+                    <option value="The Tech and Data Industry">The Tech and Data Industry</option>
+                    <option value="The Construction Industry">The Construction Industry</option>
+                    <option value="The Transport Sector">The Transport Sector</option>
+                    <option value="Culture, Sports and Entertainment Industry">Culture, Sports and Entertainment
+                        Industry</option>
+                    <option value="The Hotel and Restaruant Industry">The Hotel and Restaruant Industry</option>
+                    <option value="The Energy Sector">The Energy Sector</option>
+                    <option value="The Grocery Store">The Grocery Store</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+
+
+            <button type="submit" class="calc_btn" name="submit">Calculate</button>
+
+        </form>
+    </main>
+
     <script src="script.js"></script>
 
- 
+
 </body>
+
 </html>

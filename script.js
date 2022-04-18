@@ -30,7 +30,9 @@ const form = document.querySelector("#calculator");
 
 function calculate(event) {
 
-  event.preventDefault();
+    event.preventDefault();
+
+
   getData();
 
 }
@@ -67,8 +69,10 @@ async function getData() {
   const result = prepareObject(carbonData, pageData);
   console.log(result);
 
-  post(result);
+  //post(result);
 
+  
+  location.href = "resolve.html"
 
 
 }
@@ -107,8 +111,7 @@ function post(postData) {
     body: postData,
   })
     .then((res) => res.json())
-    .then((data) => console.log(data))
-    .then( location.href = "resolve.html");
+    .then((data) => console.log(data));
 }
 
 
