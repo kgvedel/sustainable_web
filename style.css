@@ -2,6 +2,8 @@
   --background-color: #242427;
   --white: #ffff;
   --dark-black: #161519;
+   
+  --dark-pink:#d33c8d;
   --hotpink: #ff69b4;
   --mid-pink:#FF7DBF;
   --light-pink: #FF99CD;
@@ -11,11 +13,11 @@
   --green: #AAD900;
 
   --input-color: #011638;
-  --input-border: var(--light-pink);
+  --input-border: var(--dark-pink);
   --input-background: var(--white);
   --input-placeholder: var(--light-pink);
-  --input-border-focus: var(--light-pink);
-  --group-color: var(--light-pink);
+  --input-border-focus: var(--darkest-blue);
+  --group-color: var(--light-blue);
   --group-border: var(--input-border);
   --group-background: var(--darkest-blue);
   --group-color-focus: var(--white);
@@ -23,7 +25,7 @@
   --group-background-focus: var(--light-blue);
 
 /*HUSK HOTPINK #ff69b4 */
-  --header-color: #16161a;
+/*   --header-color: #16161a;
     --input-color: #fff;
     --input-border: #d33c8d;
     --input-background: #16161a;
@@ -34,67 +36,56 @@
     --group-background: #d33c8d;
     --group-color-focus: #fff ;
     --group-border-focus: var(--input-border-focus);
-    --group-background-focus: #003180;
+    --group-background-focus: #003180; */
   }
   /*HUSK HOTPINK #ff69b4 */
 
 
-.calc_btn {
-  background-color: var(--hotpink);
-  border-style: none;
-    box-shadow: 
-      6px 6px 1px 0 #fff inset,
-      -8px -8px 1px 0 #003180  inset;
-      border-radius: 10px;
-      width: 7.5rem;
-      height: 3rem;
-      
-  }
 
 
-  body{
-    background-color: var(--header-color);
+
+ /*  body{
+    background-color: var(--background-color);
       margin: auto;
       display: grid;
       justify-content: center;
       background-image: url("images/floatingcity.svg");
       background-repeat: no-repeat;
       background-position:center top 35px;
-      object-fit: contain;
+      
       background-size: 64rem;
      
   }
-/* 
-body {
-  
+ */
+
+
+
+ body {
+  background-color: var(--background-color);
   margin: auto;
   display: grid;
   justify-content: center;
-  background-color: var(--background-color);
-  width:1000px;
+
   background-image: url(images/floating_city.svg);
   background-repeat: no-repeat;
   padding-top: 2rem;
-  background-position: 50% -90%;
-  background-size: 55%;
+  background-position: 100% -20%;
+  object-fit: contain;
   margin-top: 2rem;
-  overflow: visible;
 }
-  */
+  
 
-
-  h1{
-    font-size: 8rem;
-      /* font-size: 5.653rem; */
-      color: var(--header-color);
-      font-weight: 700;
-      -webkit-text-fill-color: #16161a; /* Will override color (regardless of order) */
-      -webkit-text-stroke-width: 3px;
-      -webkit-text-stroke-color: var(--input-background);
-
-      padding-bottom: 3rem;
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
+
+
+
+form_section{
+ 
+}
 
 
 form {
@@ -128,14 +119,17 @@ p {
 }
 
 h1 {
-  font-size: 5.653rem;
+  font-size: 6.653rem;
+  /*font-size: 5.653rem;*/
   color: var(--white);
   font-weight: 700;
   font-family: "Big Shoulders Display", "Open Sans";
   text-transform: uppercase;
   text-shadow: 8px 1px 0px var(--darkest-blue);
+margin-bottom: 0;
   
 }
+
 
 h2 {
   font-size: 3.998rem;
@@ -167,6 +161,19 @@ label h6{
 }
 
 /*STYLING OF BUTTONS*/
+
+.calc_btn {
+  background-color: var(--hotpink);
+  border-style: none;
+    box-shadow: 
+      6px 6px 1px 0 var(--light-pink) inset,
+      -8px -8px 1px 0 #003180  inset;
+      border-radius: 10px;
+      width: 7.5rem;
+      height: 3rem;
+      
+  }
+
 .calc_btn {
   text-align: center;
   align-self: flex-end;
@@ -259,7 +266,7 @@ select{
     background-color: var(--input-background);
     transition: border 0.8s ease;
     border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   }
 
 input::-moz-placeholder {
