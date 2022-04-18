@@ -18,6 +18,8 @@ const dataCarbon = {
 
 
 
+const url = localStorage. getItem("url");
+const industry = localStorage. getItem("industry");
 window.addEventListener('DOMContentLoaded',start);
 function start(){
  getData();
@@ -29,38 +31,36 @@ function start(){
 
 
 
-
 const APIKEY = "625474ee67937c128d7c96d6";
 const endpoint = "https://sustainable-485c.restdb.io/rest/company";
 
 async function getData() {
- // const url = form.elements.url.value;  /* get url from other script!!!!!*/
 
-  //console.log(url);
  
  
  
 
   const pageInsightApiKey = "AIzaSyB5TMLidzXZG4KFFbQjWVmGv1bfUYPrDGg";
-  //const pageSpeed = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${pageInsightApiKey}`;
+  const pageSpeed = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${pageInsightApiKey}`;
 
- // const websiteCarbon = `https://kea-alt-del.dk/websitecarbon/site/?url=${url}`;
+  const websiteCarbon = `https://kea-alt-del.dk/websitecarbon/site/?url=${url}`;
 
 
 
-  const requestPage = await fetch("page.json");
+  const requestPage = await fetch(pageSpeed);
   const pageData = await requestPage.json();
 
 
-  const requestCarbon = await fetch("kea.json");
+  const requestCarbon = await fetch(websiteCarbon);
   const carbonData = await requestCarbon.json();
 
-
+console.log(carbonData);
+console.log(pageData);
   const result = prepareObject(carbonData, pageData);
   console.log(result);
 
   post(result);
-  displayList(result);
+
 
 
   
@@ -79,7 +79,7 @@ function prepareObject(jsonDataC, jsonDataP) {
   siteData.energy = jsonDataC.statistics.energy;
   siteData.co2 = jsonDataC.statistics.co2.grid.grams;
   siteData.green = jsonDataC.green;
-// siteData.section = form.elements.select_industry.value; import this from other script
+ siteData.section = industry;
 
 
   return siteData;
@@ -103,14 +103,14 @@ function post(postData) {
     body: postData,
   })
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => displayList(data));
 }
 
 
 
 
 function displayList(data) {
-    console.log(data);
+
     //clearing the list
    // document.querySelector("#your_result #list ").innerHTML = "";
   displayData(data);

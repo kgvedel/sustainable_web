@@ -16,22 +16,29 @@ const dataCarbon = {
   loading_experience: "",
   section:""
 };
+const form = document.querySelector("#calculator");
 
 
 
 window.addEventListener('DOMContentLoaded',start);
 function start(){
+  
   form.addEventListener("submit", calculate);
 
 }
 
-const form = document.querySelector("#calculator");
+
+const industry = form.elements.select_industry.value;
+
 
 
 function calculate(event) {
 
     event.preventDefault();
 
+    const url = form.elements.url.value;
+    localStorage. setItem("url", url);
+    localStorage. setItem("industry", industry);
 
     location.href = "resolve.html";
 
