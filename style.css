@@ -25,7 +25,19 @@
   --group-border-focus: var(--input-border-focus);
   --group-background-focus: var(--dark-pink);
 
-
+  /*HUSK HOTPINK #ff69b4 */
+  /*   --header-color: #16161a;
+    --input-color: #fff;
+    --input-border: #d33c8d;
+    --input-background: #16161a;
+    --input-placeholder: rgb(96, 96, 96);
+    --input-border-focus: #003180 ;
+    --group-color: #fff;
+    --group-border: var(--input-border);
+    --group-background: #d33c8d;
+    --group-color-focus: #fff ;
+    --group-border-focus: var(--input-border-focus);
+    --group-background-focus: #003180; */
 }
 /*HUSK HOTPINK #ff69b4 */
 
