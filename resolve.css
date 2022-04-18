@@ -196,9 +196,6 @@ margin-top: -1rem;
     transition: 1s;
 }
 
-/* .style:hover{
-    background-color: aquamarine;
-} */
 .form-group-radio{
     display: flex;
     flex-wrap: wrap;
@@ -211,12 +208,9 @@ input[type="radio"] {
     display: grid;
     place-content: center;
     cursor: pointer;
-    /* Add if not using autoprefixer */
     -webkit-appearance: none;
     appearance: none;
-    /* For iOS < 15 to remove gradient background */
     background-color: var(--darkest-blue);
-    /* Not removed via appearance */
     margin: 0;
     width: 1.2rem;
     height: 1.2rem;
@@ -263,55 +257,91 @@ input[type="radio"] {
   appearance: none;
   background: transparent;
   cursor: pointer;
-  width: 15rem;
+  width: 20rem;
 }
 
-/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="text"] {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  padding: 8px 16px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-appearance: none;
+  color: var(--white);
+  border: none;
+  background-color: var(--mid-blue);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.325);
+  border-radius: 10px;
+  transition: 1s;
+}
+input[type="text"]:focus{
+  border: 1px solid var(--dark-pink);
+  transform: scale(1.02);
+  transition: 1s;
+}
+
+input::-moz-placeholder {
+  color: var(--input-placeholder);
+}
+input:-ms-input-placeholder {
+  color: var(--input-placeholder);
+}
+input::placeholder {
+  color: var(--input-placeholder);
+}
+input:focus {
+  outline: none;
+}
+
 input[type="range"]::-webkit-slider-runnable-track {
   background: var(--mid-blue);
-  height: 0.5rem;
 }
 
-/******** Firefox ********/
 input[type="range"]::-moz-range-track {
-  background: var(--mid-blue);
-  height: 0.5rem;
+  background-color: var(--mid-blue);
+  box-shadow: #00000088 0.5px 0.5px 1px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
+  -webkit-appearance: none; 
   appearance: none;
-  margin-top: -12px; /* Centers thumb on the track */
-  background-color: #5cd5eb;
+  margin-top: -12px;
+  box-shadow: 3px 2px 1px 0 var(--white) inset, -8px -2px 1px 0 var(--dark-pink) inset;
+  border-radius: 20px; 
+  background-color: var(--mid-pink);
   height: 2rem;
   width: 1rem;    
 }
 input[type="range"]::-moz-range-thumb {
-  border: none; /*Removes extra border that FF applies*/
-  border-radius: 0; /*Removes default border-radius that FF applies*/
-  background-color: #5cd5eb;
+  border: none; 
+  box-shadow: 3px 2px 1px 0 var(--white) inset, -8px -2px 1px 0 var(--dark-pink) inset;
+  border-radius: 20px; 
+  background-color: var(--mid-pink);
   height: 2rem;
   width: 1rem;
 }
 
 /***** Focus Styles *****/
-/* Removes default focus */
+
 input[type="range"]:focus {
   outline: none;
 }
 
-/***** Chrome, Safari, Opera, and Edge Chromium *****/
 input[type="range"]:focus::-webkit-slider-thumb {
-  border: 1px solid #053a5f;
-  outline: 3px solid #053a5f;
-  outline-offset: 0.125rem;
+ transform: scale(1.1);
 }
 
-/******** Firefox ********/
 input[type="range"]:focus::-moz-range-thumb {
-  border: 1px solid #053a5f;
-  outline: 3px solid #053a5f;
-  outline-offset: 0.125rem;     
+  transform: scale(1.1);
+      
+}
+input[type="range"]::-moz-range-progress {
+  background-color: var(--light-pink); 
+}
+input[type="range"]::-ms-fill-lower {
+  background-color: var(--light-pink); 
 }
 
 
