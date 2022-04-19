@@ -1,4 +1,3 @@
-import "./style.css";
 
 //vi mangler: Clone, åbne nyt siteData ved calculate og forms
 
