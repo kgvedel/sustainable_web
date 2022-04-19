@@ -1,0 +1,25 @@
+{
+    "url": "https://kea.dk/",
+    "green": "unknown",
+    "bytes": 2569784,
+    "cleanerThan": 0.32,
+    "statistics": {
+      "adjustedBytes": 1940186.92,
+      "energy": 0.003261526479013264,
+      "co2": {
+        "grid": {
+          "grams": 1.5492250775313003,
+          "litres": 0.8616789881229093
+        },
+        "renewable": {
+          "grams": 1.4040438361435688,
+          "litres": 0.780929181663053
+        }
+      }
+    },
+    "timestamp": 1649317490
+  }
+
+
+
+  
