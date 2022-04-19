@@ -42,7 +42,6 @@
 main{
     max-width:1200px ;
     margin: auto;
-    
 }
 
 
@@ -74,12 +73,13 @@ h1 {
   font-family: "Big Shoulders Display", "Open Sans";
   text-transform: uppercase;
   text-shadow: 8px 1px 0px var(--darkest-blue);
-  margin-bottom: 0;
+  margin-bottom: 3rem;
 }
 
 h2 {
   font-size: 1.998rem;
   font-weight: 500;
+  color: var(--light-pink);
 }
 
 h3 {
@@ -89,7 +89,8 @@ h3 {
 
 h4 {
   font-size: 1.400rem;
-  font-weight: 500;
+  font-weight: 450;
+  color: var(--mid-pink);
 }
 
 h5 {
@@ -109,12 +110,58 @@ body {
 }
 
 .result_card{
-  margin: 2rem auto;
+  margin: auto;
     border-radius: 20px;
     box-shadow: 12px 12px 1px 0 var(--white) inset, -12px -12px 1px 0 var(--dark-pink) inset;
     background-color: var(--light-pink);
-    padding: 40px;
+    padding: 30px;
+    max-width: fit-content;
+    margin-bottom: 5rem;
 
+}
+
+.end_card_list{
+  display: flex;
+  list-style: none;
+  flex-direction:column;
+  gap: 2.5rem;
+  font-size: 1rem;
+
+}
+.green_card span{
+  font-size: 0.7rem;
+  color: white;
+}
+.green_card{
+  color: var(--green);
+  text-align: center;
+}
+
+.list_temp_card span{
+  font-size: 1.400rem;
+  font-weight: 450;
+  color: var(--white);
+
+}
+
+
+.carbon_list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+}
+
+
+
+.list_temp{
+  text-align: center;
+}
+
+.list_temp span{
+  font-weight: bold;
+  text-align: center;
 }
 .share_btn{
   margin: 1rem;
@@ -148,11 +195,11 @@ color: var(--light-blue);
     color: var(--dark-pink);
     margin-top: 5rem;
     border-radius: 20px;
-    width: 100%;
+    max-width: 30rem;
     padding: 20px;
     background-image: url(images/lightblu_blob.svg);
     background-repeat: no-repeat;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .the_end_card h3{
@@ -176,9 +223,9 @@ color: var(--light-blue);
 }
 
 .result_graphics{
-    gap: 1rem;
+    gap: 10rem;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     
 }
 
@@ -189,6 +236,7 @@ color: var(--light-blue);
   padding: 20px 50px;
   line-height: 25px;
 margin-top: -1rem;
+margin-bottom: 1rem;
 }
 
 .change_results h3, .change_results h6{
@@ -217,6 +265,8 @@ margin-top: -1rem;
     gap: 1rem;
     font-size: 1rem;
     line-height: 1.1;
+    margin-bottom: 1rem;
+
 }
 
 input[type="radio"] {
@@ -297,15 +347,6 @@ input[type="text"]:focus{
   transition: 1s;
 }
 
-input::-moz-placeholder {
-  color: var(--input-placeholder);
-}
-input:-ms-input-placeholder {
-  color: var(--input-placeholder);
-}
-input::placeholder {
-  color: var(--input-placeholder);
-}
 input:focus {
   outline: none;
 }
@@ -340,7 +381,8 @@ input[type="range"]::-moz-range-thumb {
 
 .spans{
   display: flex;
-  gap: 37%;
+  gap: 40%;
+  font-size: 0.7rem;
 }
 
 /***** Focus Styles *****/
