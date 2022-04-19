@@ -17,7 +17,7 @@ const dataCarbon = {
   section: ""
 };
 
-
+const form = document.querySelector(".change_results");
 const industry = localStorage.getItem("industry");
 const url = localStorage.getItem("url");
 
@@ -25,6 +25,7 @@ window.addEventListener('DOMContentLoaded', start);
 function start() {
   getData();
 
+  form.addEventListener("input", updateData);
 }
 
 
@@ -57,18 +58,20 @@ async function getData() {
   const requestCarbon = await fetch("fb-carbon.json");
   const carbonData = await requestCarbon.json();
 
-  console.log(carbonData);
-  console.log(pageData);
+
   const result = prepareObject(carbonData, pageData);
   console.log(result);
 
+
+
   post(result);
+  return result;
 
 }
 
+const siteData = Object.create(dataCarbon);
 
 function prepareObject(jsonDataC, jsonDataP) {
-  const siteData = Object.create(dataCarbon);
 
   const siteUrl = jsonDataC.url;
   let company;
@@ -91,8 +94,8 @@ function prepareObject(jsonDataC, jsonDataP) {
   siteData.loading_experience = jsonDataP.loadingExperience.overall_category;
   siteData.web_url = siteUrl;
 
-  siteData.energy = jsonDataC.statistics.energy;
-  siteData.co2 = jsonDataC.statistics.co2.grid.grams;
+  siteData.energy = jsonDataC.statistics.energy.toFixed(5);
+  siteData.co2 = jsonDataC.statistics.co2.grid.grams.toFixed(5);
   siteData.green = jsonDataC.green;
   siteData.section = industry;
 
@@ -130,14 +133,80 @@ function displayList(data) {
   //clearing the list
   // document.querySelector("#your_result #list ").innerHTML = "";
   displayData(data);
+  displayCard(data);
 
+
+  
+
+}
+
+function updateData(){
+
+  const imgSlider = form.elements.images.value;
+  const imgType = form.elements.image_type.value;
+  const headers = form.elements.headers.value;
+
+console.log(headers);
+/*best*/
+if(imgSlider == 0 && imgType == "wepd" || headers == 0 && imgType == "wepd" ||imgSlider == 0 && headers == 0 ){
+  siteData.performance= 0.99;
+  siteData.energy = 0.00041;
+  siteData.green = true;
+  siteData.loading_experience = "FAST";
+}
+
+/* worst*/
+else if(imgSlider == 1 && imgType == "png" || headers == 1 && imgType == "png" ||imgSlider == 1 && headers == 1 ){
+  siteData.performance = 0.83;
+  siteData.energy = 0.00073;
+  siteData.green = false;
+  siteData.loading_experience = "SLOW";
+
+}/*good*/
+else if(imgSlider== 0 || imgType == "wepd" || headers== 0 ){
+  siteData.performance= 0.99;
+  siteData.energy = 0.00045;
+  siteData.green = true;
+  siteData.loading_experience = "AVERAGE";
+}
+/*still very bad*/
+else if(imgSlider == 1 && imgType == "jpeg" ||  headers == 1 && imgType == "jpeg"){
+  siteData.performance = 0.84;
+  siteData.energy = 0.00069;
+  siteData.green = false;
+  siteData.loading_experience = "SLOW";
+}
+
+/*ok*/
+else if(imgSlider == 0.5 || imgType == "jpeg" ||  headers == 0.5){
+  siteData.performance= 0.94;
+  siteData.energy = 0.00059;
+  siteData.green = true;
+  siteData.loading_experience = "SLOW";
+
+}/*quite bad*/
+else if (imgSlider == 1 || imgType == "png" ||  headers == 1 ){
+  siteData.performance = 0.88;
+  siteData.energy = 0.00065;
+  siteData.green = false;
+  siteData.loading_experience = "SLOW";
+
+}
+
+
+
+
+
+
+
+
+displayCard(siteData);
 
 
 }
 
 function displayData(siteData) {
   const clone = document.querySelector("#carbon_template").content.cloneNode(true);
-  const end_card = document.querySelector(".the_end_card");
 
   clone.querySelector("[data-field=energy]").textContent = siteData.energy;
   clone.querySelector("[data-field=co2]").textContent = siteData.co2 + " grams";
@@ -145,6 +214,13 @@ function displayData(siteData) {
   clone.querySelector("[data-field=performance]").textContent = siteData.performance;
   clone.querySelector("[data-field=timing]").textContent = siteData.timing;
   clone.querySelector("[data-field=overall_loading_experience]").textContent = siteData.loading_experience;
+
+  document.querySelector("#your_result #list tbody").appendChild(clone);
+
+}
+
+function displayCard(siteData){
+  const end_card = document.querySelector(".the_end_card");
 
   end_card.querySelector("[data-field=company]").textContent = siteData.site_name;
   end_card.querySelector("[data-field=performance]").textContent = siteData.performance;
@@ -158,12 +234,7 @@ function displayData(siteData) {
     end_card.querySelector("[data-field=green]").textContent = "Not green";
 
   }
-
-
-  document.querySelector("#your_result #list tbody").appendChild(clone);
-
-
-
+  
 }
 
 
