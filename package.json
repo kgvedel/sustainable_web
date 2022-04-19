@@ -20,5 +20,9 @@
   "homepage": "https://github.com/kgvedel/sustainable_web#readme",
   "devDependencies": {
     "vite": "^2.9.1"
+  },
+  "dependencies": {
+    "resolve": "^1.22.0",
+    "results": "^0.14.1"
   }
 }
