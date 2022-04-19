@@ -43,7 +43,7 @@ console.log(industry);
     localStorage. setItem("url", url);
     localStorage. setItem("industry", industry);
 
-   location.href = "/resolve.html";
+   location.href = "resolve.html";
 
 }
 
