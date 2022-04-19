@@ -1,0 +1,1 @@
+import"./resolve.d8063fb6.js";const e=document.querySelector("#calculator");window.addEventListener("DOMContentLoaded",o);function o(){e.addEventListener("submit",r)}function r(l){l.preventDefault();const n=e.elements.url.value,t=e.elements.select_industry.value;console.log(t),localStorage.setItem("url",n),localStorage.setItem("industry",t),location.href="resolve.html"}

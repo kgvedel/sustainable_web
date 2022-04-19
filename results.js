@@ -1,5 +1,6 @@
 
-
+import "./style.css";
+import "./resolve.css";
 
 
 
