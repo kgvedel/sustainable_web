@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kgvedel/sustainable_web.git"
@@ -20,8 +20,5 @@
   "homepage": "https://github.com/kgvedel/sustainable_web#readme",
   "devDependencies": {
     "vite": "^2.9.1"
-  },
-  "dependencies": {
-    "animejs": "^3.2.1"
   }
 }
