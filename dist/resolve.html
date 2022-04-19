@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolve</title>
+    <link rel="stylesheet" href="resolve.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="background-wrap">
+        <div class="x1">
+            <div class="cloud"></div>
+        </div>
+
+        <div class="x2">
+            <div class="cloud"></div>
+        </div>
+
+        <div class="x3">
+            <div class="cloud"></div>
+        </div>
+
+        <div class="x4">
+            <div class="cloud"></div>
+        </div>
+
+        <div class="x5">
+            <div class="cloud"></div>
+        </div>
+    </div>
+
+    <main id="main">
+    <section id="result_section">
+        <h1>Your websites sustainability:</h1>
+            <!--Result after initial calculation-->
+
+            <div id="your_result" class="result_card">
+
+
+                    <table id="list">
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+
+            <section>
+
+
+                <div class="result_graphics">
+
+                    <div class="results-tree-etc">
+                        <div class="header_graphics"><img src="images/treeline.svg" alt=""></div>
+                       
+                    
+                        <form class="change_results">
+                            <h2>What changes can be done?</h2>
+                            <p>Try change the results and check the card next to you. With this,
+                                you will be able to see what more that can be done in order to change your score.</p>
+                            
+                            <br>
+                                <h4>Name of website</h4>
+                                <label for="website_name">
+                                <span class="hidden">No need for HTTPS:// or WWW</span>
+                            </label>
+                            <div class="form-group">
+                                <input type="text" id="website_name" name="website_name" placeholder="Insert name here">
+                            </div>
+<br>
+                            <h4>Reduce length of headers</h4>
+                            <label for="headers">
+                                How low can you go...
+                            </label>
+                            <div class="form-group">
+                                <input type="range" step="0.5" min="0" max="1" value=".2" id="headers" name="headers">
+
+                                <div class="spans">
+                                    <span>Short</span>
+                                    <span>Medium</span>
+                                    <span>Long</span>
+                                    </div>
+                            </div>
+
+<br>
+                            
+                                <h4>Images says more than words</h4>
+                            
+
+                            <div class="form-group"> 
+                            <label for="images">How many images?</label>
+                            <input type="range"
+                            step="0.5"
+                            min="0"
+                            max="1"
+                            value=".2"
+                            id="images"
+                            name="images"
+                            >
+                            <div class="spans">
+                            <span>Few</span>
+                            <span>Medium</span>
+                            <span>Many</span>
+                            </div>
+                            
+                        
+                        </div>
+<br>
+
+                            
+                                <h4>How do you want your images?</h4>
+                            
+                            <p>WEPD is a format that pocess all properties as JPEG and PNG. It is also a more green
+                                approach, because it is possible to compress images to a much smaller size and still
+                                gain a good image for a website. Take these considerations in when making a website, that
+                                contains many images.</p>
+                                <br>
+
+                            <div class="form-group-radio">
+                                <div class="style">
+                                    <input type="radio" id="wepd" name="image_type" value="wepd">
+                                    <label for="wepd">WEPD</label>
+                                </div>
+                                <br>
+                                <div class="style">
+                                    <input type="radio" id="jpeg" name="image_type" value="jpeg">
+                                    <label for="jpeg">JPEG</label>
+                                </div>
+                                <span class="hidden">Are you sure JPEG is a good option for that amount of
+                                    images?</span><br>
+                                <div class="style">
+                                    <input type="radio" id="png" name="image_type" value="png">
+                                    <label for="png">PNG</label>
+                                </div>
+                                <span class="hidden">Are you sure PNG is a good option for that amount of images?</span>
+                            </div>
+                            </form>
+                    </div>
+                
+
+                    <article class="the_end_card">                    
+                        
+                            <h3 data-field="company"></h3>
+
+                            <h4 class="green_card">Your green card <span>....Not that kind of green card</span></h4>
+        
+
+                            <br>
+                            
+      <ul class="end_card_list">
+        <div class="list_temp_card"> 
+            <span>Overall performance</span>
+<li data-field="performance"></li>
+</div>
+
+<div class="list_temp_card">
+    <span>Overall loading experience</span>
+<li data-field="overall_loading_experience"></li>
+</div>
+
+<div class="list_temp_card">
+    <span>Timing when running the website</span>
+<li data-field="timing"></li>
+</div>
+
+<div class="list_temp_card">
+    <span>Energy used</span>
+<li data-field="energy"></li>
+</div> 
+
+<div class="list_temp_card">
+    <span>Your sites co2 leverage</span>
+<li data-field="co2"></li>
+</div>
+
+<div class="list_temp_card">
+    <span>Is it Green?</span>
+<li data-field="green"></li>
+</div>
+
+      </ul>
+
+
+            <button class="share_btn">SHARE</button>
+                    </article>
+                </div>
+               
+            </section>
+    </section>
+
+</main>
+
+    <template id="carbon_template">
+
+<ul class="carbon_list"> 
+    <div class="list_temp">
+    <span>Energy</span>
+            <li data-field="energy"></li>
+        </div>
+        <div class="list_temp">
+    <span>Co2</span>
+            <li data-field="co2"></li>
+        </div>
+        <div class="list_temp">
+    <span>Is it green?</span>
+            <li data-field="green"></li>
+        </div>
+        <div class="list_temp">
+    <span>Performance score</span>
+            <li data-field="performance"></li>
+        </div>
+        <div class="list_temp">
+    <span>Timing</span>
+            <li data-field="timing"></li>
+        </div>
+        <div class="list_temp">
+    <span>Overall loading experience</span>
+            <li data-field="overall_loading_experience"></li>
+        </div>
+        </ul>
+      
+    </template>
+
+    <script src="results.js" type="module"></script>
+
+
+</body>
+
+</html>
